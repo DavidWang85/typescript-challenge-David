@@ -8,6 +8,15 @@
  * 輸出: [[2, 4], [6, 8], [10, 12]]
  */
 
-export function processMultiArray(arr) {
+export function processMultiArray(arr:[][]): number[][] {
     // 在此實現函式
+    let initTwoAry: number[][] = [];
+    for(let subArray of arr){
+        let initAry: number[] = [];
+        for(let item of subArray){
+            initAry.push(item*2)
+        }
+        initTwoAry.push(initAry)
+    }
+    return initTwoAry;
 }

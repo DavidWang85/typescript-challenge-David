@@ -8,8 +8,19 @@
  * 輸出: 'The traffic light is Red'
  */
 export enum TrafficLight {
-
+  Red = 'Red',
+  Yellow = 'Yellow',
+  Green = 'Green',
 }
-export function getTrafficLightStatus(light) {
+export function getTrafficLightStatus(light:TrafficLight): string {
   // 在此實現函式
+	if(light == TrafficLight.Red){
+    return `The traffic light is Red`;
+  }else if(light ==TrafficLight.Yellow){
+    return `The traffic light is Yellow`;
+  }else if(light ==TrafficLight.Green){
+    return `The traffic light is Green`;
+  }else{
+    return '交通大亂'
+  }
 }
