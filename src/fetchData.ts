@@ -4,6 +4,10 @@
  * @param url - 要取得資料的 URL
  * @returns - 回傳一個 Promise，該 Promise resolve 的值應該是從 URL 取得的資料
  */
-
+import fetch from 'node-fetch';  //不知道為什麼差了這個套件
 // 請在下方寫下你的程式碼
-
+export async function fetchData(url: string) {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}

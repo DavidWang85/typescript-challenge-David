@@ -10,4 +10,7 @@
 
 export function sortNumbers(numbers: number[]): number[] {
   // 在此實現函式
+  let newAry:number[] = [];
+  newAry = numbers.sort((a,b)=>a-b);
+  return newAry;
 }

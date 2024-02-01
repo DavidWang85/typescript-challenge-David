@@ -23,6 +23,16 @@ export enum BookCategory {
  * 輸出: 'Book category: Novel'
  */
 
-export function getBookCategory(category) {
+export function getBookCategory(category: BookCategory) {
   // 在此實現函式
+  switch (category) {
+    case BookCategory.Novel:
+      return 'Book category: Novel';
+    case BookCategory.Science:
+      return 'Book category: Science';
+    case BookCategory.Education:
+      return 'Book category: Education';
+    default:
+      return '超出書籍類別';
+  }
 }
